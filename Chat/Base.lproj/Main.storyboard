@@ -1,24 +1,95 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Profile View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ProfileViewController" customModule="Chat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ukB-CZ-KNY">
+                                <rect key="frame" x="16" y="502" width="288" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="YJ6-kG-8Nk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Edit">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder-user" translatesAutoresizingMaskIntoConstraints="NO" id="6Zt-Im-NhS">
+                                <rect key="frame" x="16" y="36" width="288" height="288"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="6Zt-Im-NhS" secondAttribute="height" multiplier="1:1" id="2JE-jG-c1a"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Mark Yankovskiy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sde-Iu-mY8">
+                                <rect key="frame" x="16" y="340" width="288" height="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I1D-GP-Hdk">
+                                <rect key="frame" x="244" y="264" width="60" height="60"/>
+                                <color key="backgroundColor" red="0.30288872122764587" green="0.46546953916549683" blue="0.90985196828842163" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="PBq-t4-q53"/>
+                                    <constraint firstAttribute="width" secondItem="I1D-GP-Hdk" secondAttribute="height" multiplier="1:1" id="jwv-xV-5qZ"/>
+                                </constraints>
+                                <state key="normal" image="camera"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" text="Enterpreneur" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="peN-JV-tg6">
+                                <rect key="frame" x="16" y="386" width="288" height="100"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Sde-Iu-mY8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="4Rc-YK-wfX"/>
+                            <constraint firstItem="Sde-Iu-mY8" firstAttribute="top" secondItem="I1D-GP-Hdk" secondAttribute="bottom" constant="16" id="5CA-Za-YZW"/>
+                            <constraint firstItem="ukB-CZ-KNY" firstAttribute="top" secondItem="peN-JV-tg6" secondAttribute="bottom" constant="16" id="8qx-H7-kM3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="I1D-GP-Hdk" secondAttribute="trailing" constant="16" id="FIR-cr-Q5Y"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ukB-CZ-KNY" secondAttribute="bottom" constant="16" id="LVA-1m-6rJ"/>
+                            <constraint firstItem="ukB-CZ-KNY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Mnf-p6-TeZ"/>
+                            <constraint firstItem="Sde-Iu-mY8" firstAttribute="top" secondItem="6Zt-Im-NhS" secondAttribute="bottom" constant="16" id="NPI-EX-L5B"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Sde-Iu-mY8" secondAttribute="trailing" constant="16" id="QQg-E1-kNT"/>
+                            <constraint firstItem="peN-JV-tg6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="TnF-mX-ikj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6Zt-Im-NhS" secondAttribute="trailing" constant="16" id="VxM-aS-o3k"/>
+                            <constraint firstItem="6Zt-Im-NhS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="bJv-AE-8hM"/>
+                            <constraint firstItem="peN-JV-tg6" firstAttribute="top" secondItem="Sde-Iu-mY8" secondAttribute="bottom" constant="16" id="dLi-zy-L23"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="peN-JV-tg6" secondAttribute="trailing" constant="16" id="fB7-MX-vVu"/>
+                            <constraint firstItem="6Zt-Im-NhS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="fYK-Uf-bVU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ukB-CZ-KNY" secondAttribute="trailing" constant="16" id="hZG-Gi-GI2"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="peN-JV-tg6" id="nbf-ML-5Qq"/>
+                        <outlet property="editButton" destination="ukB-CZ-KNY" id="axa-IV-zWl"/>
+                        <outlet property="photoButton" destination="I1D-GP-Hdk" id="4ss-zX-iUb"/>
+                        <outlet property="profileImageVIew" destination="6Zt-Im-NhS" id="Oyt-iY-fr5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="135" y="133.09859154929578"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="camera" width="350" height="350"/>
+        <image name="placeholder-user" width="600" height="600"/>
+    </resources>
 </document>
