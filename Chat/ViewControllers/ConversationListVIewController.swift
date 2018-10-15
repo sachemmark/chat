@@ -23,6 +23,7 @@ class ConversationListViewController: UIViewController, UITableViewDelegate, UIT
     @IBOutlet weak var navigationBar: UINavigationItem!
     @IBOutlet weak var tableView: UITableView!
     
+    
     var selectedName: String = "Oleg Tinkov" // just default value
     
     var onlineConversations = [
@@ -111,6 +112,11 @@ class ConversationListViewController: UIViewController, UITableViewDelegate, UIT
             destinationViewController.title = selectedName
         }
     }
+    
+    func logThemeCnahging(selectedTheme: UIColor) {
+        print(selectedTheme)
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

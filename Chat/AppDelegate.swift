@@ -40,8 +40,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
     
+    func setTheme() {
+        switch UserDefaults.standard.integer(forKey: "theme") {
+        case 1:
+            UINavigationBar.appearance().barTintColor = Themes.theme1.0
+            UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: Themes.theme1.1]
+            UIApplication.shared.statusBarStyle = Themes.theme1.2
+        case 2:
+            UINavigationBar.appearance().barTintColor = Themes.theme2.0
+            UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: Themes.theme2.1]
+            UIApplication.shared.statusBarStyle = Themes.theme2.2
+        case 3:
+            UINavigationBar.appearance().barTintColor = Themes.theme3.0
+            UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: Themes.theme3.1]
+            UIApplication.shared.statusBarStyle = Themes.theme3.2
+        default:
+            UserDefaults.standard.set(1, forKey: "theme")
+        }
+    }
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        self.setTheme()
+        
         return true
     }
 

@@ -33,9 +33,15 @@
                         <viewLayoutGuide key="safeArea" id="vLd-eV-R73"/>
                     </view>
                     <navigationItem key="navigationItem" id="9jR-2z-wqA">
+                        <barButtonItem key="leftBarButtonItem" title="Themes" id="bQl-me-kKC">
+                            <connections>
+                                <segue destination="QwQ-e5-2Vs" kind="show" id="Wxw-Sm-pPK"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Profile" id="7xg-5z-LLR">
                             <connections>
-                                <segue destination="BYZ-38-t0r" kind="modal" id="X39-cH-sBJ"/>
+                                <action selector="presentProfileViewController:" destination="iWU-9T-hKz" id="Xtb-m4-iGF"/>
+                                <segue destination="BYZ-38-t0r" kind="show" id="Nrl-N6-uFS"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -68,19 +74,19 @@
                                 </state>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder-user" translatesAutoresizingMaskIntoConstraints="NO" id="6Zt-Im-NhS">
-                                <rect key="frame" x="16" y="36" width="288" height="288"/>
+                                <rect key="frame" x="16" y="80" width="288" height="288"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="6Zt-Im-NhS" secondAttribute="height" multiplier="1:1" id="2JE-jG-c1a"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Mark Yankovskiy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sde-Iu-mY8">
-                                <rect key="frame" x="16" y="340" width="288" height="30"/>
+                                <rect key="frame" x="16" y="384" width="288" height="30"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I1D-GP-Hdk">
-                                <rect key="frame" x="244" y="264" width="60" height="60"/>
+                                <rect key="frame" x="244" y="308" width="60" height="60"/>
                                 <color key="backgroundColor" red="0.30288872122764587" green="0.46546953916549683" blue="0.90985196828842163" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="PBq-t4-q53"/>
@@ -89,7 +95,7 @@
                                 <state key="normal" image="camera"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" text="Enterpreneur" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="peN-JV-tg6">
-                                <rect key="frame" x="16" y="386" width="288" height="100"/>
+                                <rect key="frame" x="16" y="430" width="288" height="56"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -223,6 +229,64 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yUU-Z9-OFZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-491.25" y="-192.25352112676057"/>
+        </scene>
+        <!--Themes-->
+        <scene sceneID="QHv-87-x8E">
+            <objects>
+                <viewController title="Themes" id="QwQ-e5-2Vs" customClass="ThemesViewController" customModule="Chat" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xZE-IU-eCu">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i63-di-cX8">
+                                <rect key="frame" x="64" y="291" width="192" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="SOI-6c-svL"/>
+                                </constraints>
+                                <state key="normal" title="Theme 2">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dbh-Oh-q2d">
+                                <rect key="frame" x="64" y="201" width="192" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="hQU-r0-OAL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Theme 1"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cm9-3t-Ssv">
+                                <rect key="frame" x="64" y="381" width="192" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="elA-bE-GD1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Theme 3"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="i63-di-cX8" firstAttribute="centerX" secondItem="tFf-TJ-gen" secondAttribute="centerX" id="1sO-xL-QJi"/>
+                            <constraint firstItem="Dbh-Oh-q2d" firstAttribute="width" secondItem="xZE-IU-eCu" secondAttribute="width" multiplier="0.6" id="3eT-rQ-7tg"/>
+                            <constraint firstItem="Dbh-Oh-q2d" firstAttribute="centerX" secondItem="tFf-TJ-gen" secondAttribute="centerX" id="6HH-vI-iPt"/>
+                            <constraint firstItem="cm9-3t-Ssv" firstAttribute="centerX" secondItem="tFf-TJ-gen" secondAttribute="centerX" id="7IW-Fo-cbq"/>
+                            <constraint firstItem="i63-di-cX8" firstAttribute="width" secondItem="xZE-IU-eCu" secondAttribute="width" multiplier="0.6" id="9Mx-0O-JBc"/>
+                            <constraint firstItem="cm9-3t-Ssv" firstAttribute="width" secondItem="xZE-IU-eCu" secondAttribute="width" multiplier="0.6" id="as4-fS-hM7"/>
+                            <constraint firstItem="i63-di-cX8" firstAttribute="top" secondItem="Dbh-Oh-q2d" secondAttribute="bottom" constant="40" id="kjf-se-GG3"/>
+                            <constraint firstItem="cm9-3t-Ssv" firstAttribute="top" secondItem="i63-di-cX8" secondAttribute="bottom" constant="40" id="meL-zM-sd4"/>
+                            <constraint firstItem="i63-di-cX8" firstAttribute="centerY" secondItem="tFf-TJ-gen" secondAttribute="centerY" id="xEn-b2-96x"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="tFf-TJ-gen"/>
+                    </view>
+                    <connections>
+                        <outlet property="themeButton1" destination="Dbh-Oh-q2d" id="47a-Qv-WSI"/>
+                        <outlet property="themeButton2" destination="i63-di-cX8" id="KU6-6o-A5T"/>
+                        <outlet property="themeButton3" destination="cm9-3t-Ssv" id="rBl-xz-2iR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eIi-Iv-N5e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-491.25" y="587.32394366197184"/>
         </scene>
     </scenes>
     <resources>
