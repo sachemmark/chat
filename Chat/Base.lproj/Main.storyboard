@@ -94,36 +94,61 @@
                                 </constraints>
                                 <state key="normal" image="camera"/>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" text="Enterpreneur" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="peN-JV-tg6">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V9h-R3-Gjy">
+                                <rect key="frame" x="16" y="502" width="43" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Y7H-wY-3gb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="GCD">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TRZ-8I-ZPB">
+                                <rect key="frame" x="217" y="502" width="87" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Mu9-Da-CIg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Operation">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Enterpreneur" borderStyle="roundedRect" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MyS-RC-5Ja">
                                 <rect key="frame" x="16" y="430" width="288" height="56"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="V9h-R3-Gjy" secondAttribute="bottom" constant="16" id="1Kc-b1-Iue"/>
                             <constraint firstItem="Sde-Iu-mY8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="4Rc-YK-wfX"/>
                             <constraint firstItem="Sde-Iu-mY8" firstAttribute="top" secondItem="I1D-GP-Hdk" secondAttribute="bottom" constant="16" id="5CA-Za-YZW"/>
-                            <constraint firstItem="ukB-CZ-KNY" firstAttribute="top" secondItem="peN-JV-tg6" secondAttribute="bottom" constant="16" id="8qx-H7-kM3"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="I1D-GP-Hdk" secondAttribute="trailing" constant="16" id="FIR-cr-Q5Y"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="TRZ-8I-ZPB" secondAttribute="bottom" constant="16" id="GSf-bG-Gkl"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ukB-CZ-KNY" secondAttribute="bottom" constant="16" id="LVA-1m-6rJ"/>
                             <constraint firstItem="ukB-CZ-KNY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Mnf-p6-TeZ"/>
                             <constraint firstItem="Sde-Iu-mY8" firstAttribute="top" secondItem="6Zt-Im-NhS" secondAttribute="bottom" constant="16" id="NPI-EX-L5B"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Sde-Iu-mY8" secondAttribute="trailing" constant="16" id="QQg-E1-kNT"/>
-                            <constraint firstItem="peN-JV-tg6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="TnF-mX-ikj"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6Zt-Im-NhS" secondAttribute="trailing" constant="16" id="VxM-aS-o3k"/>
                             <constraint firstItem="6Zt-Im-NhS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="bJv-AE-8hM"/>
-                            <constraint firstItem="peN-JV-tg6" firstAttribute="top" secondItem="Sde-Iu-mY8" secondAttribute="bottom" constant="16" id="dLi-zy-L23"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="peN-JV-tg6" secondAttribute="trailing" constant="16" id="fB7-MX-vVu"/>
                             <constraint firstItem="6Zt-Im-NhS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="fYK-Uf-bVU"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ukB-CZ-KNY" secondAttribute="trailing" constant="16" id="hZG-Gi-GI2"/>
+                            <constraint firstItem="MyS-RC-5Ja" firstAttribute="top" secondItem="Sde-Iu-mY8" secondAttribute="bottom" constant="16" id="nAl-4z-r6j"/>
+                            <constraint firstItem="ukB-CZ-KNY" firstAttribute="top" secondItem="MyS-RC-5Ja" secondAttribute="bottom" constant="16" id="nbK-Vl-3tJ"/>
+                            <constraint firstItem="V9h-R3-Gjy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="sit-Fe-ddq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MyS-RC-5Ja" secondAttribute="trailing" constant="16" id="vcS-qg-nHV"/>
+                            <constraint firstItem="MyS-RC-5Ja" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="xAa-Sp-H8q"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="descriptionLabel" destination="peN-JV-tg6" id="nbf-ML-5Qq"/>
+                        <outlet property="GCDButton" destination="V9h-R3-Gjy" id="BgM-Bc-IQN"/>
+                        <outlet property="descriptionTextField" destination="MyS-RC-5Ja" id="IVW-tq-xOf"/>
                         <outlet property="editButton" destination="ukB-CZ-KNY" id="axa-IV-zWl"/>
+                        <outlet property="operationButton" destination="TRZ-8I-ZPB" id="ql8-ge-54h"/>
                         <outlet property="photoButton" destination="I1D-GP-Hdk" id="4ss-zX-iUb"/>
                         <outlet property="profileImageVIew" destination="6Zt-Im-NhS" id="Oyt-iY-fr5"/>
                     </connections>
